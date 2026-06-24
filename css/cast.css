@@ -250,3 +250,79 @@
     height: 3rem;
     object-fit: contain;
 }
+
+@media (max-width: 760px) {
+
+    .cast-page,
+    .cast-profile,
+    .cast-hero {
+        min-height: auto;
+    }
+
+    .cast-page {
+        padding: 7rem 0 4rem;
+    }
+
+    .cast-layout,
+    .cast-profile-inner,
+    .cast-hero-inner {
+        width: min(calc(100% - 32px), 480px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .cast-visual,
+    .cast-image-wrap,
+    .cast-image {
+        width: min(100%, 340px);
+        margin-inline: auto;
+    }
+
+    .cast-info {
+        min-width: 0;
+        text-align: center;
+    }
+
+    .cast-info h1,
+    .cast-name {
+        max-width: 100%;
+        margin-inline: auto;
+
+        font-size: clamp(3.2rem, 17vw, 5.2rem);
+        line-height: 0.95;
+        letter-spacing: 0.08em;
+
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: keep-all;
+    }
+
+    .cast-mini-meta,
+    .cast-role,
+    .cast-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.8;
+        letter-spacing: 0.12em;
+    }
+
+    .cast-x-link {
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .cast-info h1,
+    .cast-name {
+        font-size: clamp(2.7rem, 16vw, 4.3rem);
+        letter-spacing: 0.05em;
+    }
+
+    .cast-layout,
+    .cast-profile-inner,
+    .cast-hero-inner {
+        width: min(calc(100% - 24px), 440px);
+    }
+}
