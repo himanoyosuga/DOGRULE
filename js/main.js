@@ -1,14 +1,17 @@
 const reveals = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-    }
-  });
-}, {
-  threshold: 0.16
-});
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  },
+  {
+    threshold: 0.16,
+  },
+);
 
 reveals.forEach((el, index) => {
   el.style.transitionDelay = `${Math.min(index * 70, 420)}ms`;
@@ -45,7 +48,10 @@ if (siteHeader && siteMenuToggle) {
     const isOpen = siteHeader.classList.toggle("is-open");
 
     siteMenuToggle.setAttribute("aria-expanded", String(isOpen));
-    siteMenuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    siteMenuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close menu" : "Open menu",
+    );
   });
 
   siteHeader.querySelectorAll(".site-header__links a").forEach((link) => {
