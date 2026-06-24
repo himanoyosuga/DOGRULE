@@ -30,3 +30,31 @@ if (homeNewsList && typeof newsItems !== "undefined") {
     })
     .join("");
 }
+
+const siteHeader = document.querySelector(".js-site-header");
+const siteMenuToggle = document.querySelector(".js-site-menu-toggle");
+
+if (siteHeader && siteMenuToggle) {
+  const closeSiteMenu = () => {
+    siteHeader.classList.remove("is-open");
+    siteMenuToggle.setAttribute("aria-expanded", "false");
+    siteMenuToggle.setAttribute("aria-label", "Open menu");
+  };
+
+  siteMenuToggle.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("is-open");
+
+    siteMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    siteMenuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  siteHeader.querySelectorAll(".site-header__links a").forEach((link) => {
+    link.addEventListener("click", closeSiteMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeSiteMenu();
+    }
+  });
+}

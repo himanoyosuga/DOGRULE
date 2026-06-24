@@ -3,33 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>DOG RULE</title>
 
-    <script>
+  <script>
     (function(d) {
       var config = {
         kitId: 'rej4xkp',
         scriptTimeout: 3000,
         async: true
       },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      h=d.documentElement,
+      t=setTimeout(function(){
+        h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";
+      },config.scriptTimeout),
+      tk=d.createElement("script"),
+      f=false,
+      s=d.getElementsByTagName("script")[0],
+      a;
+
+      h.className+=" wf-loading";
+      tk.src='https://use.typekit.net/'+config.kitId+'.js';
+      tk.async=true;
+      tk.onload=tk.onreadystatechange=function(){
+        a=this.readyState;
+        if(f||a&&a!="complete"&&a!="loaded")return;
+        f=true;
+        clearTimeout(t);
+        try{Typekit.load(config)}catch(e){}
+      };
+      s.parentNode.insertBefore(tk,s)
     })(document);
   </script>
+
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-      <nav class="site-header" aria-label="Primary navigation">
-      <a class="site-header__brand" href="#top">DOG RULE</a>
+  <nav class="site-header js-site-header" aria-label="Primary navigation">
+    <button
+      class="site-header__logo-button js-site-menu-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <img src="./images/logo.png" alt="DOG RULE">
+    </button>
 
-      <div class="site-header__links">
-        <a href="#introduction">Introduction.</a>
-        <a href="#notice">Notice</a>
-        <a href="#cast">Cast</a>
-      </div>
-    </nav>
+    <div class="site-header__links">
+      <a href="#top">Home</a>
+      <a href="#introduction">Introduction.</a>
+      <a href="#notice">Notice</a>
+      <a href="#cast">Cast</a>
+    </div>
+  </nav>
 
-    <header class="hero" id="top">
+  <header class="hero" id="top">
     <div class="hero-bg"></div>
     <div class="hero-shade"></div>
     <div class="hero-side-shade"></div>
@@ -60,14 +89,14 @@
             <a href="./cast/luuce.html" class="cast-link">Luuce</a> /
             <a href="./cast/sawei.html" class="cast-link">Saw Ei</a> /
             <a href="./cast/makoto.html" class="cast-link">Makoto</a> /
-            <a href="./cast/mayu.html" class="cast-link">Mayu</a> <br>
+            <a href="./cast/mayu.html" class="cast-link">Mayu</a><br>
             <a href="./cast/ayui.html" class="cast-link">Ayui</a> /
             <a href="./cast/ohitsuji.html" class="cast-link">Ohitsuji</a> /
-            <a href="./cast/piyotan.html" class="cast-link">Piyotan</a> <br>
-            <a href="./cast/Ichimaru.html" class="cast-link">Ichimaru</a> /
+            <a href="./cast/piyotan.html" class="cast-link">Piyotan</a><br>
+            <a href="./cast/ichimaru.html" class="cast-link">Ichimaru</a> /
             <a href="./cast/monaka.html" class="cast-link">Monaka</a> /
             <a href="./cast/serina.html" class="cast-link">Serina</a> /
-            <a href="./cast/igarashi.html" class="cast-link">Igarashi</a> 
+            <a href="./cast/igarashi.html" class="cast-link">Igarashi</a>
           </p>
         </div>
       </div>
@@ -206,7 +235,6 @@
       </div>
     </section>
 
-
     <section id="cast" class="section cast-section">
       <div class="diagonal-line reverse"></div>
 
@@ -218,14 +246,14 @@
             <a href="./cast/luuce.html" class="cast-link">Luuce</a> /
             <a href="./cast/sawei.html" class="cast-link">Saw Ei</a> /
             <a href="./cast/makoto.html" class="cast-link">Makoto</a> /
-            <a href="./cast/mayu.html" class="cast-link">Mayu</a> <br>
+            <a href="./cast/mayu.html" class="cast-link">Mayu</a><br>
             <a href="./cast/ayui.html" class="cast-link">Ayui</a> /
             <a href="./cast/ohitsuji.html" class="cast-link">Ohitsuji</a> /
-            <a href="./cast/piyotan.html" class="cast-link">Piyotan</a> <br>
-            <a href="./cast/Ichimaru.html" class="cast-link">Ichimaru</a> /
+            <a href="./cast/piyotan.html" class="cast-link">Piyotan</a><br>
+            <a href="./cast/ichimaru.html" class="cast-link">Ichimaru</a> /
             <a href="./cast/monaka.html" class="cast-link">Monaka</a> /
             <a href="./cast/serina.html" class="cast-link">Serina</a> /
-            <a href="./cast/igarashi.html" class="cast-link">Igarashi</a> 
+            <a href="./cast/igarashi.html" class="cast-link">Igarashi</a>
           </p>
         </div>
 
@@ -236,7 +264,7 @@
     </section>
   </main>
 
-<script src="./js/news-data.js"></script>
-<script src="./js/main.js"></script>
+  <script src="./js/news-data.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
