@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,32 +11,32 @@
   <link rel="apple-touch-icon" href="./images/favicon.png">
 
   <script>
-    (function(d) {
+    (function (d) {
       var config = {
         kitId: 'rej4xkp',
         scriptTimeout: 3000,
         async: true
       },
-      h=d.documentElement,
-      t=setTimeout(function(){
-        h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";
-      },config.scriptTimeout),
-      tk=d.createElement("script"),
-      f=false,
-      s=d.getElementsByTagName("script")[0],
-      a;
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
 
-      h.className+=" wf-loading";
-      tk.src='https://use.typekit.net/'+config.kitId+'.js';
-      tk.async=true;
-      tk.onload=tk.onreadystatechange=function(){
-        a=this.readyState;
-        if(f||a&&a!="complete"&&a!="loaded")return;
-        f=true;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
         clearTimeout(t);
-        try{Typekit.load(config)}catch(e){}
+        try { Typekit.load(config) } catch (e) { }
       };
-      s.parentNode.insertBefore(tk,s)
+      s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
 
@@ -44,12 +45,8 @@
 
 <body>
   <nav class="site-header js-site-header" aria-label="Primary navigation">
-    <button
-      class="site-header__logo-button js-site-menu-toggle"
-      type="button"
-      aria-label="Open menu"
-      aria-expanded="false"
-    >
+    <button class="site-header__logo-button js-site-menu-toggle" type="button" aria-label="Open menu"
+      aria-expanded="false">
       <img src="./images/logo.png" alt="DOG RULE">
     </button>
 
@@ -115,31 +112,34 @@
       <div class="section-inner text-center">
         <p class="reveal section-label">Introduction.</p>
 
-        <div class="reveal intro-text">
+        <div class="reveal intro-text intro-story">
           <p>
             辛い社会人生活を送るあなた。<br>
             終わらない仕事、求められる役割、正解のない人間関係。
           </p>
 
-          <p>ある夜、あなたの元に一通の奇妙なメールが届く。</p>
-
-          <p class="accent-text">差出人：首輪志願制クラブ DOG RULE</p>
-
-          <p class="large-text">一晩、犬として過ごしてみませんか？</p>
+          <div class="intro-mail">
+            <p class="intro-mail-from">差出人：首輪志願制クラブ DOG RULE</p>
+            <p class="intro-mail-message">一晩、犬として過ごしてみませんか？</p>
+          </div>
 
           <p>
             悪質な冗談か、スパムメール。<br>
             そう思ったはずなのに、なぜか削除できない。
           </p>
 
-          <p>気づけば、あなたの足はメールに記載されていた場所へと向かっていた。</p>
+          <p>
+            気づけば、あなたの足はメールに記載されていた場所へと向かっていた。
+          </p>
 
           <p>
             そこは、犬になりたい人だけが集まる、首輪志願制のクラブだった。<br>
             ここでのルールはただ一つ。
           </p>
 
-          <p class="large-text">ご主人様の犬として振る舞うこと。</p>
+          <p class="large-text">
+            ご主人様の犬として振る舞うこと。
+          </p>
 
           <p class="final-text">
             首輪が外れるまで、<br>
@@ -259,7 +259,7 @@
             <a href="./cast/igarashi.html" class="cast-link">Igarashi</a>
           </p>
         </div>
-        
+
 
         <div class="reveal owner">
           Event Owner: InuDog / Dog Rule / @DOGRULE115
@@ -271,4 +271,5 @@
   <script src="./js/news-data.js"></script>
   <script src="./js/main.js"></script>
 </body>
+
 </html>
