@@ -1,0 +1,246 @@
+.cast-detail-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #03040a;
+}
+
+.cast-detail-bg {
+  position: fixed;
+  inset: 0;
+  background: url("../images/cast/aqu.jpg") center center / cover no-repeat;
+  opacity: 0.12;
+  filter: blur(18px) saturate(0.82);
+  transform: scale(1.08);
+  animation: castBgDrift 24s ease-in-out infinite alternate;
+}
+
+.cast-detail-shade {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 72% 22%, rgba(185, 154, 100, 0.15), transparent 30rem),
+    linear-gradient(90deg, rgba(3, 4, 10, 0.96), rgba(3, 4, 10, 0.72), rgba(3, 4, 10, 0.94)),
+    linear-gradient(180deg, rgba(3, 4, 10, 0.82), #03040a);
+}
+
+.cast-detail {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 40px), 1180px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2.5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cast-detail-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) 1fr;
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+  padding: 5rem 0 2rem;
+}
+
+.cast-visual {
+  position: relative;
+}
+
+.cast-visual::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border: 1px solid rgba(185, 154, 100, 0.24);
+  transform: rotate(-5deg);
+  z-index: -1;
+}
+
+.cast-visual::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: -10%;
+  bottom: -8%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(185, 154, 100, 0.8),
+    transparent
+  );
+  transform: rotate(-8deg);
+}
+
+.cast-image-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5.4;
+  border: 1px solid rgba(185, 154, 100, 0.32);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 34px 110px rgba(0, 0, 0, 0.58),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: rotate(-1.2deg);
+}
+
+.cast-image-frame::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    120deg,
+    transparent 44%,
+    rgba(255, 255, 255, 0.16) 50%,
+    transparent 56%
+  );
+  transform: translateX(-48%);
+  transition: transform 1.2s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cast-image-frame:hover::before {
+  transform: translateX(48%);
+}
+
+.cast-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+.cast-info {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.cast-label {
+  margin: 0 0 1.8rem;
+  color: #b99a64;
+  font-family: Didot, "Bodoni 72", "Times New Roman", serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  letter-spacing: 0.36em;
+}
+
+.cast-info h1 {
+  margin: 0;
+  color: #fff8ef;
+  font-family: Didot, "Bodoni 72", "Times New Roman", serif;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  line-height: 0.88;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-shadow: 0 22px 70px rgba(0, 0, 0, 0.78);
+}
+
+.cast-name-line {
+  width: min(100%, 620px);
+  height: 1px;
+  margin: 3rem 0;
+  background: linear-gradient(
+    90deg,
+    rgba(185, 154, 100, 0.95),
+    rgba(185, 154, 100, 0.18),
+    transparent
+  );
+  transform: rotate(-2deg);
+}
+
+.cast-mini-meta {
+  color: rgba(244, 234, 220, 0.72);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 2;
+  letter-spacing: 0.18em;
+}
+
+.cast-mini-meta p {
+  margin: 0;
+}
+
+@keyframes castBgDrift {
+  0% {
+    transform: scale(1.08) translate3d(-0.5%, -0.5%, 0);
+  }
+
+  100% {
+    transform: scale(1.14) translate3d(0.8%, 0.5%, 0);
+  }
+}
+
+@media (max-width: 900px) {
+  .cast-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .cast-visual {
+    width: min(100%, 420px);
+    margin: 0 auto;
+  }
+
+  .cast-info {
+    text-align: center;
+  }
+
+  .cast-name-line {
+    margin: 2.5rem auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .cast-detail {
+    width: min(calc(100% - 32px), 1180px);
+    padding-top: 1.8rem;
+  }
+
+  .cast-detail-nav {
+    font-size: 0.82rem;
+  }
+
+  .cast-detail-layout {
+    padding-top: 3.5rem;
+  }
+
+  .cast-info h1 {
+    font-size: clamp(4.2rem, 24vw, 6.4rem);
+  }
+
+  .cast-mini-meta {
+    font-size: 0.95rem;
+  }
+}
+
+.cast-x-link {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 2.4rem;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(185, 154, 100, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.cast-x-link:hover {
+  opacity: 0.78;
+  transform: translateY(-2px);
+  border-color: rgba(185, 154, 100, 0.48);
+}
+
+.cast-x-link img {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: block;
+  object-fit: contain;
+}
