@@ -212,8 +212,8 @@
     display: inline-grid;
     place-items: center;
 
-    width: 3.5em;
-    height: 4rem;
+    width: 3em;
+    height: 3rem;
     margin-top: 2.5rem;
 
     background:
@@ -221,7 +221,7 @@
             rgba(255, 255, 255, 0.07),
             rgba(255, 255, 255, 0.025));
     border: 1px solid rgba(185, 154, 100, 0.28);
-    border-radius: 0.9rem;
+    border-radius: 0.5rem;
 
     box-shadow:
         0 14px 36px rgba(0, 0, 0, 0.28),
@@ -246,8 +246,8 @@
 
 .cast-x-link img {
     display: block;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     object-fit: contain;
 }
 
