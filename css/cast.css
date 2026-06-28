@@ -326,3 +326,144 @@
         width: min(calc(100% - 24px), 440px);
     }
 }
+
+.cast-profile-label {
+    margin: 0 0 1.1rem;
+    color: var(--gold);
+    font-family:
+        "warbler-banner",
+        Didot,
+        "Bodoni 72",
+        "Times New Roman",
+        serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.28em;
+}
+
+.cast-profile-name-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.cast-profile-name-row h1 {
+    margin: 0;
+}
+
+.cast-profile-slash {
+    width: min(100%, 420px);
+    height: 1px;
+    margin: 2rem 0 2.4rem;
+    background: linear-gradient(90deg,
+            rgba(185, 154, 100, 0.95),
+            rgba(185, 154, 100, 0.22),
+            transparent);
+    transform: rotate(-2deg);
+    transform-origin: left center;
+}
+
+.cast-quote-card {
+    position: relative;
+    max-width: 39rem;
+    padding: 1.8rem 2rem;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.024));
+    border: 1px solid rgba(185, 154, 100, 0.24);
+    border-radius: 1.1rem;
+
+    box-shadow:
+        0 24px 76px rgba(0, 0, 0, 0.36),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    overflow: hidden;
+}
+
+.cast-quote-card::before {
+    content: "";
+    position: absolute;
+    inset: -60%;
+    background: linear-gradient(120deg,
+            transparent 42%,
+            rgba(185, 154, 100, 0.12) 50%,
+            transparent 58%);
+    transform: translateX(-45%);
+    pointer-events: none;
+}
+
+.cast-quote-card p {
+    position: relative;
+    margin: 0;
+    color: rgba(244, 234, 220, 0.88);
+    font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+    line-height: 2;
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 760px) {
+    .cast-profile-label {
+        text-align: center;
+    }
+
+    .cast-profile-name-row {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+    }
+
+    .cast-profile-slash {
+        margin: 1.6rem auto 2rem;
+        width: min(100%, 320px);
+    }
+
+    .cast-quote-card {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 1.35rem;
+        text-align: center;
+    }
+
+    .cast-quote-card p {
+        font-size: 0.98rem;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    }
+}
+
+.cast-quote-card p {
+    margin: 0;
+}
+
+.cast-quote-card p+p {
+    margin-top: 1.5rem;
+}
+
+.cast-quote-main {
+    color: var(--ivory-strong) !important;
+    font-size: clamp(1.15rem, 2vw, 1.45rem) !important;
+    line-height: 2 !important;
+    letter-spacing: 0.1em;
+}
+
+.cast-quote-line {
+    width: 7rem;
+    height: 1px;
+    margin: 1.8rem 0;
+    background: linear-gradient(90deg,
+            rgba(185, 154, 100, 0.9),
+            rgba(185, 154, 100, 0.18),
+            transparent);
+}
+
+@media (max-width: 760px) {
+    .cast-quote-line {
+        margin: 1.6rem auto;
+    }
+
+    .cast-quote-main {
+        font-size: 1.05rem !important;
+        line-height: 2 !important;
+    }
+}
